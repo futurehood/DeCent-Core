@@ -9,7 +9,9 @@
 
 ## Introduction
 
-This repository serves as a hub for the DeCent-Core project. The current release state is: ***usable prototype***
+This repository serves as a hub for the DeCent-Core project. 
+
+The current release state is: ***usable prototype***
 
 DeCent-Core allows users to use DWAs to access Web420.
 
@@ -50,7 +52,7 @@ In the meantime, if you're interested in implementing your own DCNT-compatible s
 ## Downloads
 DeCent-Core executables
 
-- Windows: <a href="https://filebin.net/6p9g2amgpf6v1apg/DeCent-Core.zip" target="_blank">https://filebin.net/6p9g2amgpf6v1apg/DeCent-Core.zip</a>
+- Windows: <a href="https://filebin.net/6p9g2amgpf6v1apg/DeCent-Core.zip" target="_blank">https://filebin.net/6p9g2amgpf6v1apg/DeCent-Core.zip </a>
 - Linux: Coming soon
 - Android: Coming soon
 
@@ -72,7 +74,6 @@ Some of the features planned for future releases:
 - More code samples
 
 <br>
-
 
 
 
