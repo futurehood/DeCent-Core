@@ -7,7 +7,33 @@
   </tr>
 </table>
 
+## Contents
+
+<ul>
+    <li>
+        <a href="#introduction">Introduction</a>
+    </li>
+    <li>
+        <a href="#overview">Overview</a>
+    </li>
+    <li>
+        <a href="#system-requirements">System Requirements</a>
+    </li>
+    <li>
+        <a href="#contribute">Contribute</a>
+    </li>
+    <li>
+        <a href="#downloads">Downloads</a>
+    </li>
+    <li>
+        <a href="#planned-features">Planned Features</a>
+    </li>
+</ul>
+
 ## Introduction
+
+>Fuck the Babylon,<br>
+>who's trying to see what I'm on
 
 This repository serves as a hub for the DeCent-Core project. 
 
@@ -44,7 +70,7 @@ In order to use DeCent-Core, you will need:
 
 DeCent-Core can operate over any network, public or private. If exposing DeCent-Core to a public network, like the Internet, it's highly recommended to wrap the connection in a VPN or a trustworthy localhost-forwarding service.
 
-## Open Source
+## Contribute
 The DeCent-Core codebase will be open-sourced shortly. Currently the codebase is undergoing some cleanup and refactoring from the prototype before release. 
 
 In the meantime, if you're interested in implementing your own DCNT-compatible server, the protocol documentation should be enough to get you started.
@@ -73,7 +99,6 @@ Some of the features planned for future releases:
 - Improved documentation
 - More code samples
 
-<br>
 
 
 
