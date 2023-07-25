@@ -7,10 +7,11 @@
   </tr>
 </table>
 
-<img src="readme/word.svg" align="right" style="width: 350px;">
 
 
 ## Contents
+
+<img src="readme/word.svg" align="right" style="width: 300px;">
 
 
 <ul>
@@ -33,6 +34,7 @@
         <a href="#planned-features">Planned Features</a>
     </li>
 </ul>
+
 
 ## Introduction
 
