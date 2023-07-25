@@ -41,7 +41,7 @@
 >Fuck the Babylon,<br>
 >who's trying to see what I'm on
 
-This repository serves as a hub for the DeCent-Core project. 
+This repository serves as a hub for the DeCent-Core project.
 
 DeCent-Core allows users to use DWAs to access Web420.
 
@@ -51,9 +51,9 @@ The current release state is: ***usable prototype***
 
 Numerous known UI bugs exist, but there is enough stability for experimenting with DWAs.
 
-## Overview 
+## Overview
 
-<img src="readme/lion.svg" align="right" style="width: 450px;">
+<img src="readme/lion.svg#play" align="right" style="width: 450px;">
 
 
 DeCent-Core is an easy-to-use implementation of the DCNT server protocol. DeCent-Core provides two key functionalities:
@@ -82,7 +82,7 @@ In order to use DeCent-Core, you will need:
 DeCent-Core can operate over any network, public or private. If exposing DeCent-Core to a public network, like the Internet, it's highly recommended to wrap the connection in a VPN or a trustworthy localhost-forwarding service.
 
 ## Contribute
-The DeCent-Core codebase will be open-sourced shortly. Currently the codebase is undergoing some cleanup and refactoring from the prototype before release. 
+The DeCent-Core codebase will be open-sourced shortly. Currently the codebase is undergoing some cleanup and refactoring from the prototype before release.
 
 In the meantime, if you're interested in implementing your own DCNT-compatible server, the protocol documentation should be enough to get you started.
 
@@ -296,7 +296,7 @@ To stop the server, use the same power button that was used to start it. The but
 
 
 
- ## Accepting Self-Signed Certificates
+## Accepting Self-Signed Certificates
 
 If the DeCent-Core server is using a self-signed certificate, anyone intending to connect with the server will need to manually accept the certificate in-browser before the connection will be allowed from the connecting browser. This includes your own connections. Generally, you should not use self-signed certificates to connect with users or devices you do not know or trust.
 
