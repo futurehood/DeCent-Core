@@ -8,7 +8,7 @@
             --text-color: #0FFFD3;
         }
         #desc,#decent-core{
-            fill:#fff;
+            fill: var(--text-color);
             fill-rule:nonzero;
         }
         @media (prefers-color-scheme: dark) {
