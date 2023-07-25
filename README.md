@@ -35,6 +35,8 @@
 >Fuck the Babylon,<br>
 >who's trying to see what I'm on
 
+<img src="readme/lion.svg" align="right" style="width: 350px;">
+
 This repository serves as a hub for the DeCent-Core project. 
 
 DeCent-Core allows users to use DWAs to access Web420.
@@ -54,7 +56,7 @@ DeCent-Core is an easy-to-use implementation of the DCNT server protocol. DeCent
 
 Self-hosting a DCNT server instance allows a user's web apps to receive proxied requests from within their networks, through a WebSocket connection to the locally-running DCNT server.
 
-This allows specially designed web applications (DWAs) to use the available local connection to the DCNT server to receive connection requests and create WebRTC peer-to-peer connections directly to another web application, enabling an entirely new class of never-before possible web applications to exist: DWAs.
+This allows specially designed web applications (DWAs) to use the available local connection to the DCNT server to receive connection requests and create WebRTC peer-to-peer connections directly to another web application. This enables an entirely new class of web applications to exist, DWAs.
 
 In addition to facilitating connections between DWAs, DeCent-Core also offers the option of hosting installable (from ZIP archive) web apps and hosting them locally for the user. This allows users to select specific, trusted web applications, store the HTML/CSS/JS files locally, and then host the executing app code for the user in an SSL/TLS context. The SSL/TLS context allows the locally running web app to create WebRTC connections to other users, which will be signaled as described above. This removes the need for traditional hosting infrastructure for web applications.
 
@@ -256,7 +258,9 @@ As mentioned above, setting the newly generated certificate as the active server
 
 ## Add Network Interfaces To The Server Configuration
 
-Out of the box, DeCent-Core defaults to only the <b>localhost/127.0.0.1 (lo)</b> network interface. Because the localhost network interface is a local loopback address, anything being served on this network interface will only be available on the device running the server. This means that it will be impossible for any other devices to connect to the DCNT server. In order for other users of your networks to be able to connect to your DCNT server, the server must be configured to listen on another network interface. In the example below, the "<i>wlan1</i>" network interface will be added to the server configuration. This will allow other devices on the local wireless network to make connections to the DCNT server. The same steps can be used to configure the DCNT server to listen on a network interface with a public address, for example, an interface to a VPN connection with a public IP or the ability to handle port forwarding. Using a network interface connected to a public address will allow other devices to connect to your DCNT server across the entire Internet. Protecting your open ports with a secure and trusted VPN or some other forwarding service (like Cloudflare Tunnel) is <b>highly recommended</b>.
+Out of the box, DeCent-Core defaults to only the <b>localhost/127.0.0.1 (lo)</b> network interface. Because the localhost network interface is a local loopback address, anything being served on this network interface will only be available on the device running the server. This means that it will be impossible for any other devices to connect to the DCNT server at this point.
+
+In order for other users of your networks to be able to connect to your DCNT server, the server must be configured to listen on another network interface with network access. These networks can be private or public. In the example below, the "<i>wlan1</i>" network interface will be added to the server configuration. This will allow other devices on the local wireless network to make connections to the DCNT server. The same steps can be used to configure the DCNT server to listen on a network interface with a public address, for example, an interface to a VPN connection with a public IP or the ability to handle port forwarding. Using a network interface connected to a public address will allow other devices to connect to your DCNT server across the entire Internet. Protecting your open ports with a secure and trusted VPN or some other forwarding service (like Cloudflare Tunnel) is <b>highly recommended</b>.
 
 <table>
     <tr>
@@ -266,7 +270,6 @@ Out of the box, DeCent-Core defaults to only the <b>localhost/127.0.0.1 (lo)</b>
         <td><img src="readme/decent-core-27.png" width="600"></td>
     </tr>
 </table>
-
 
 1. From the Server Settings section, locate the network interface you would like to add to the current server configuration. In this case, the <b>wlan1</b> interface will be used. This will allow other devices on the same local network to connect to the DCNT server being configured.
 2. The <b>wlan1</b> network interface has been selected.
@@ -304,7 +307,7 @@ Using trusted certificates to identify your device is preferred (Support coming 
     </tr>
 </table>
 
-1. The DCNT server is running, and the Endpoints have been activated. Using the added WLAN1 network interface endpoint link for https://192.168.4.20:4201 (your address will be different) will open the address in the default browser.
+1. The DCNT server is running, and the <b>endpoints</b> have been activated. Using the added WLAN1 network interface endpoint link for https://192.168.4.20:4201 (your address will be different) will open the address in the default browser.
 2. The browser has attempted to connect to the endpoint at https://192.168.4.20:4201 (your address will be different) and found that the certificate the server is using is not trusted.
 3. Using the "*Advanced*" button in the browser (Firefox) expands the page to include an option to accept the certificate. This page will look different in other browsers.
 4. Using the "*Accept the Risk and Continue*" button (Firefox) will generate an exception for the self-signed certificate in the browser, allowing it to be used. Future connections to the endpoint will now succeed.
@@ -324,7 +327,7 @@ To authorize a DWA, there are two options:
 
 ## Installing Decentralized Web Applications (DWAs)
 
-DWAs are also installable as self-contained ZIP packages composed of HTML/CSS/JS and required files.
+DWAs are also installable as self-contained ZIP packages composed of HTML/CSS/JS and required application files.
 
 To install DeCent-Messenger in your DeCent-Core instance, use the <b>APPS</b> button at the top of the DeCent-Core UI to navigate to the Apps section. From the apps section, use the <b>Add App</b> dialog to install DeCent-Messenger.
 
@@ -357,6 +360,17 @@ For more information on how to use DeCent-Messenger, visit the project repositor
 6. Clicking the listing will open the Manage App dialog, where the app can be launched or removed.
 7. DeCent-Messenger has been launched from a self-hosted DeCent-Core server instance.
 8. DeCent-Messenger can be used to communicate between devices with absolute privacy.
+
+## Notes On Security
+
+If you only intend to use DeCent-Core intermittently for short periods of time, say, to signal a peer connection and then shut down the DCNT server once the P2P connection has been established in your browser, you can probably use the system safely without a VPN or other protection if you must. The risk of opening ports increases exponentially as the length of time the port has been opened increases. Essentially, the more you expose your DCNT server to public networks, the more likely it is that it may eventually be identified and targeted in hacking attempts. If you rarely have your DCNT server online, and have only shared your address with trusted associates, there is reduced risk of running an unprotected connection. If you intend to run a DCNT server for longer periods of time, or perpetually, again, protecting your server is highly recommended.
+
+One final and important note on the topic of running an unprotected DCNT instance, if you do this, you will generate firsthand metadata about the connection with ISPs.
+
+Think of your DCNT address like a phone number, do not share your address with anyone that you don't trust, or don't know.
+
+This application is currently a ***usable prototype***. It is likely to contain bugs that make it insecure at this point in time. While the tech is theoretically completely sound, and seemingly works in reality, the system needs further development and security audits before it can be considered truly secure.
+
 
 </details>
 
