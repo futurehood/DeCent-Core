@@ -7,7 +7,11 @@
   </tr>
 </table>
 
+<img src="readme/word.svg" align="right" style="width: 350px;">
+
+
 ## Contents
+
 
 <ul>
     <li>
@@ -35,8 +39,6 @@
 >Fuck the Babylon,<br>
 >who's trying to see what I'm on
 
-<img src="readme/lion.svg#play" align="right" style="width: 250px;">
-
 This repository serves as a hub for the DeCent-Core project. 
 
 DeCent-Core allows users to use DWAs to access Web420.
@@ -48,6 +50,9 @@ The current release state is: ***usable prototype***
 Numerous known UI bugs exist, but there is enough stability for experimenting with DWAs.
 
 ## Overview 
+
+<img src="readme/lion.svg" align="right" style="width: 450px;">
+
 
 DeCent-Core is an easy-to-use implementation of the DCNT server protocol. DeCent-Core provides two key functionalities:
 
