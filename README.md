@@ -35,7 +35,7 @@
 >Fuck the Babylon,<br>
 >who's trying to see what I'm on
 
-<img src="readme/lion.svg" align="right" style="width: 350px;">
+<img src="readme/lion.svg#play" align="right" style="width: 250px;">
 
 This repository serves as a hub for the DeCent-Core project. 
 
