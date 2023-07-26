@@ -13,7 +13,6 @@
 
 <img src="readme/word.svg" align="right" style="width: 300px;">
 
-
 <ul>
     <li>
         <a href="#introduction">Introduction</a>
@@ -71,6 +70,8 @@ By using DeCent-Core in conjunction with a trusted DWA, users are able to attain
 
 ## System Requirements
 
+<img src="readme/1tru-badge.svg" align="right" style="width: 160px;">
+
 In order to use DeCent-Core, you will need:
 
 - A device running a compatible OS
@@ -78,6 +79,7 @@ In order to use DeCent-Core, you will need:
 - A modern web browser (Firefox is highly recommended)
 - (***Optional***) VPN or tunneling service
 - (***Optional***) (*Coming soon*) Domain name
+- (***Optional***) (*Coming soon*) Trusted certificate for use with domain name
 
 DeCent-Core can operate over any network, public or private. If exposing DeCent-Core to a public network, like the Internet, it's highly recommended to wrap the connection in a VPN or a trustworthy localhost-forwarding service.
 
@@ -87,6 +89,9 @@ The DeCent-Core codebase will be open-sourced shortly. Currently the codebase is
 In the meantime, if you're interested in implementing your own DCNT-compatible server, the protocol documentation should be enough to get you started.
 
 ## Downloads
+
+<img src="readme/master-your-platform.svg">
+
 DeCent-Core executables
 
 - Windows: <a href="https://filebin.net/6p9g2amgpf6v1apg/DeCent-Core.zip" target="_blank">https://filebin.net/6p9g2amgpf6v1apg/DeCent-Core.zip </a>
@@ -118,12 +123,10 @@ Some of the features planned for future releases:
 
 ## Installation
 
-To install and run DeCent-Core follow these steps:
+To install DeCent-Core follow these steps:
 
-    1. Download the ZIP archive containing the application code and executables for your compatible OS.
-    2. Extract the archive to a location that pleases you.
-
-To stop the application, use the ***Quit*** option from the system tray.
+1. Download the ZIP archive containing the application code and executables for your compatible OS.
+2. Extract the archive to a location that pleases you.
 
 </details>
 
@@ -202,19 +205,17 @@ Within the settings section, navigate between server settings and system setting
         <p>In the system settings section, use the available options to configure how DeCent-Core behaves when running. The configuration will be stored in a configuration file (configuration.json) and is separate from server profiles. Currently, changes made to the System Settings will persist through application restarts without any required action.</p>
         <h3>System Settings</h3>
         <ul>
-            <li>Profiles - Manage (add/remove) profiles and set the Active Profile</li>
-            <li>Connectivity - Select which network interfaces will be used to listen for DCNT WebSocket connections. The <b>lo</b> (localhost/127.0.0.1) interface will always be selected.</li>
-            <li>Protocols - Select which protocols the DCNT serve will support</li>
-            <li>Bindings - Select which ports the DCNT server will listen on.</li>
-            <li>Security - Manage security settings and certificates.</li>
+            <li>User Interface - Set the UI theme and language (Currently only English is supported)</li>
+            <li>Storage - Manage the storage paths for the datastore, keystore, and apps directory.</li>
+            <li>Notifications - Control which aspects of DeCent-Core generate system notifications, if any (Currently non-functional).</li>
+            <li>Keystore - Manage how the keystore is accessed from the UI (Currently non-functional).</li>
         </ul>
-        <br>
     </li>
 </ol>
 
-## Generate A New Certificate
+## Add A New Certificate
 
-While DeCent-Core will generate a default certificate for you, additional certificates can be added and selected for use with the embedded DCNT server. This may be useful for managing different identities in conjunction with profiles.
+While DeCent-Core will generate a default certificate for you, additional certificates can be added and selected for use with the embedded DCNT server. This may be useful for managing different identities in conjunction with profiles. In the future, you will be able to import trusted certificates obtained elsewhere, as well as generate trusted certificates within DeCent-Core using Let's Encrypt.
 
 <table>
     <tr>
@@ -326,8 +327,8 @@ Once a DCNT server is configured and connectable, the next step is to find DWAs 
 
 To authorize a DWA, there are two options:
 
-1. By visiting a traditional hosted DWA in your browser, the DWA will attempt to connect to your local DCNT server and trigger an Authorization Request. If the request is granted, the hosted DWA will be able to communicate with your local DCNT server.
-2. Load a DWA package from file in the Apps section of DeCent-Core (Instructions below).
+1. By visiting a traditional hosted DWA in your browser, the DWA can attempt to connect to your local DCNT server and trigger an Authorization Request. If the request is granted, the hosted DWA will be able to communicate with your local DCNT server.
+2. Load a DWA package from ZIP file in the Apps section of DeCent-Core (Instructions below).
 
 <a href="">DeCent-Messenger</a> is an in-house messaging DWA, available as both a traditionally-hosted app on Github, and also as a locally-installable package. Read more about it on the project repository. To authorize a remotely-hosted DWA, simply visit the DWA in your browser. For example, if you have DeCent-Core running, and you visit the hosted version of DeCent-Messenger on Github and add a local server, an authorization request will appear in the DeCent-Core UI. If the request is denied, the application will be disconnected immediately. If the request is granted, the application will be allowed to communicate with the DCNT server.
 
@@ -383,6 +384,3 @@ This application is currently a ***usable prototype***. It is likely to contain 
 
 
 <br>
-
-
-
