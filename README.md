@@ -32,6 +32,9 @@
     <li>
         <a href="#planned-features">Planned Features</a>
     </li>
+    <li>
+        <a href="#planned-features">Documentation</a>
+    </li>
 </ul>
 
 
@@ -42,7 +45,7 @@
 
 This repository serves as a hub for the DeCent-Core project.
 
-DeCent-Core allows users to use DWAs to access Web420.
+DeCent-Core allows users to access Web420 via Decentralized Web Applications (DWAs).
 
 The application is written in Kotlin and uses Kotlin Multiplatform to target Windows, Linux, Android, and MacOS. The codebase will be open-sourced shortly, more below.
 
@@ -67,6 +70,27 @@ This allows specially designed web applications (DWAs) to use the available loca
 In addition to facilitating connections between DWAs, DeCent-Core also offers the option of hosting installable (from ZIP archive) web apps and hosting them locally for the user. This allows users to select specific, trusted web applications, store the HTML/CSS/JS files locally, and then host the executing app code for the user in an SSL/TLS context. The SSL/TLS context allows the locally running web app to create WebRTC connections to other users, which will be signaled as described above. This removes the need for traditional hosting infrastructure for web applications.
 
 By using DeCent-Core in conjunction with a trusted DWA, users are able to attain complete privacy through total control.
+
+## Screenshots
+
+### Windows
+
+<table>
+    <tr>
+        <td>
+            <img src="readme/decent-core-8.png">
+        </td>
+        <td>
+            <img src="readme/decent-core-9.png">
+        </td>
+        <td>
+            <img src="readme/decent-core-10.png">
+        </td>
+        <td>
+            <img src="readme/decent-core-14.png">
+        </td>
+    </tr>
+</table>
 
 ## System Requirements
 
@@ -94,10 +118,9 @@ In the meantime, if you're interested in implementing your own DCNT-compatible s
 
 DeCent-Core executables
 
-- Windows: <a href="https://filebin.net/5gge3s2naxg8ivcq/DeCent-Core.zip" target="_blank">https://filebin.net/5gge3s2naxg8ivcq/DeCent-Core.zip </a>
+- Windows: <a href="https://filebin.net/5gge3s2naxg8ivcq/DeCent-Core.zip" target="_blank">https://filebin.net/5gge3s2naxg8ivcq/DeCent-Core.zip </a> / MD5: 0e89bd14e3d53d3c64ff966dff5feb8d
 - Linux: Coming soon
 - Android: Coming soon
-
 
 ## Planned Features
 
@@ -113,6 +136,12 @@ Some of the features planned for future releases:
 - Improved certificate keystore/truststore management
 - UI bug fixes
 - Improved documentation
+
+## Support development
+
+`BTC: bc1qz9g5zjls3eapjdacwcgadw83apu22hnlwtj0sm`
+
+`XMR: 43X5gj33PCaZ5NCQRD53kNa24KQoVbUUxayKaEcmpVyb5gfqcqG6KPR9MgrvT5k5cEQyKA1v3xNWidzZgynRKp1L4NAkZEh`
 
 ## Documentation
 
@@ -384,3 +413,6 @@ This application is currently a ***usable prototype***. It is likely to contain 
 
 
 <br>
+
+
+
